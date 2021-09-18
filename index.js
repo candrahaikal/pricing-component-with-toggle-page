@@ -27,6 +27,8 @@
 
 const button = document.getElementById('header-toggle');
 const buttonBall = document.getElementById('header-toggle-ball');
+const btn = document.getElementsByClassName('card-price');
+const container = document.querySelector('.container');
 
 //basic
 const basicMonthly = document.getElementById('basic-monthly');
@@ -47,10 +49,19 @@ button.addEventListener('click', function(){
     basic();
     professional();
     master();
-
-
- 
 })
+
+container.addEventListener('click', function nama(e) {
+  const klik = e.target.getAttribute("class");
+  console.log(klik)
+  
+  if(klik == 'btn' || klik == 'btn btn-special'){
+    alert('belum bisa dipencet, tunggu w bikin programnya dulu \n -c');
+  } else{
+    alert('salah')
+  }
+})
+
 
 function basic(){
   basicMonthly.classList.toggle('hide');
